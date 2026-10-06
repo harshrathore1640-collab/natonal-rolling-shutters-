@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="National Rolling Shutters — Rolling shutters, SS water fountain blades and MS/SS fabrication works. Delhi based, pan India delivery.">
+<title>National Rolling Shutters | Delhi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080a0d;--panel:#101419;--panel2:#151a20;--text:#f4f5f6;--muted:#9ba3ad;
+  --steel:#bfc7cf;--accent:#f2b84b;--line:rgba(255,255,255,.11);--max:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+.container{width:min(var(--max),92%);margin:auto}
+.section{padding:105px 0}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1,h2,h3{font-family:Oswald,sans-serif;text-transform:uppercase;line-height:1.04}
+h2{font-size:clamp(42px,5.5vw,72px);letter-spacing:-.02em}
+.section-head{max-width:760px;margin-bottom:50px}
+.section-head p{color:var(--muted);font-size:16px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border:1px solid var(--steel);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;transition:.3s}
+.btn-gold{background:var(--accent);border-color:var(--accent);color:#111}
+.btn-gold:hover{filter:brightness(1.1);transform:translateY(-3px)}
+.btn-outline:hover{background:#fff;color:#111;transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* navbar */
+nav{position:fixed;z-index:50;top:0;width:100%;padding:20px 0;background:linear-gradient(180deg,rgba(0,0,0,.85),transparent)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:50px;height:50px;border:1px solid var(--steel);display:grid;place-items:center;background:#0a0c0f;font-family:Oswald;font-size:20px;letter-spacing:.04em}
+.brand-text{font-weight:800;letter-spacing:.09em;font-size:14px}
+.brand-text span{display:block;font-size:9px;color:var(--accent);letter-spacing:.2em;margin-top:2px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#d9dde1}
+.nav-links a:hover{color:var(--accent)}
+.menu{display:none;border:0;background:none;color:#fff;font-size:28px}
+
+/* hero */
+.hero{
+ min-height:100vh;display:flex;align-items:flex-end;position:relative;
+ background:
+ linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.45) 60%,rgba(0,0,0,.78)),
+ linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%),
+ url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=90") center/cover;
+}
+.hero-content{padding:170px 0 95px;max-width:850px}
+.hero h1{font-size:clamp(64px,9vw,125px)}
+.hero h1 span{color:var(--accent)}
+.hero-sub{max-width:670px;color:#d1d5da;font-size:18px;margin:24px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-tag{position:absolute;right:4%;bottom:34px;color:#cfd4da;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+
+/* stats */
+.stats{background:#0d1115;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 25px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{font:500 38px Oswald;color:var(--accent)}
+.stat span{display:block;text-transform:uppercase;font-size:10px;letter-spacing:.13em;color:var(--muted);margin-top:3px}
+
+/* about */
+.about{background:#0a0d10}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-image{height:620px;overflow:hidden}
+.about-image img{height:100%;transition:1s}
+.about-image:hover img{transform:scale(1.04)}
+.about-copy p{color:var(--muted);font-size:16px;margin:0 0 18px}
+.quote{border-left:2px solid var(--accent);padding-left:20px;margin-top:28px;color:#ddd}
+
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.service{background:var(--panel);padding:34px;min-height:275px;position:relative;transition:.35s}
+.service:hover{background:#181e24}
+.num{color:var(--accent);font:500 15px Oswald}
+.service h3{font-size:31px;margin:40px 0 14px}
+.service p{font-size:13px;color:var(--muted);max-width:350px}
+.arrow{position:absolute;right:28px;bottom:25px;color:var(--accent);font-size:25px}
+
+/* showcase */
+.showcase{background:#0b0f13}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:300px 300px;gap:12px}
+.card{position:relative;overflow:hidden}
+.card img{height:100%;transition:.8s}
+.card:hover img{transform:scale(1.06)}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent 60%)}
+.card:first-child{grid-row:1/3}
+.label{position:absolute;z-index:2;left:22px;bottom:18px;text-transform:uppercase;font-size:11px;letter-spacing:.13em}
+
+/* process */
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.process{padding:28px 18px;border-right:1px solid var(--line)}
+.process:last-child{border:0}
+.process strong{color:var(--accent);font:500 13px Oswald}
+.process h3{font-size:24px;margin:24px 0 10px}
+.process p{color:var(--muted);font-size:13px}
+
+/* banner */
+.banner{
+ background:
+ linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.48)),
+ url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=2200&q=85") center/cover;
+ padding:110px 0;
+}
+.banner-copy{max-width:820px}
+.banner h2{font-size:clamp(44px,6vw,80px)}
+.banner p{color:#d0d4d8;margin:20px 0 30px;max-width:650px}
+
+/* contact */
+.contact{background:#090c0f}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.info-list{display:grid;gap:20px}
+.info{padding-bottom:18px;border-bottom:1px solid var(--line)}
+.info small{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:10px;margin-bottom:4px}
+.info a,.info div{font-size:19px}
+.contact-card{background:var(--panel);padding:38px;border:1px solid var(--line)}
+.contact-card h3{font-size:34px;margin-bottom:22px}
+.form{display:grid;gap:13px}
+.form input,.form textarea{width:100%;background:#080a0d;border:1px solid #30363d;color:#fff;padding:15px;font:inherit;outline:none}
+.form input:focus,.form textarea:focus{border-color:var(--accent)}
+.form textarea{min-height:130px;resize:vertical}
+
+/* footer */
+footer{background:#050608;border-top:1px solid var(--line);padding:45px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}
+.footer-brand{font:500 29px Oswald;text-transform:uppercase}
+.footer p,.footer a{font-size:12px;color:var(--muted)}
+.footer p{margin-top:10px;max-width:320px}
+.footer h4{font-size:10px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.footer a{display:block;margin:8px 0}
+.footer a:hover{color:#fff}
+.copy{margin-top:35px;padding-top:18px;border-top:1px solid #181c20;color:#5e6670;font-size:10px;display:flex;justify-content:space-between;gap:20px}
+
+/* floating */
+.floating{position:fixed;right:19px;bottom:19px;z-index:70;display:flex;flex-direction:column;gap:9px}
+.float{width:53px;height:53px;border-radius:50%;display:grid;place-items:center;font-size:20px;box-shadow:0 12px 30px rgba(0,0,0,.45);transition:.25s}
+.float:hover{transform:translateY(-4px)}
+.call{background:#171b20;border:1px solid #67717b}
+.wa{background:#15965a;border:1px solid #43d28c}
+
+/* mobile */
+@media(max-width:900px){
+ .nav-links{display:none}.menu{display:block}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .about-image{height:460px}
+ .services-grid{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px}
+ .card:first-child{grid-column:1/3;grid-row:1}
+ .process-grid{grid-template-columns:1fr 1fr}
+ .process:nth-child(2),.process:nth-child(4){border-right:0}
+ .process:nth-child(n+3){border-top:1px solid var(--line)}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .section{padding:75px 0}.hero-content{padding:145px 0 78px}.hero h1{font-size:59px}
+ .hero-sub{font-size:15px}.hero-tag{display:none}
+ .stats-grid{grid-template-columns:1fr 1fr}
+ .stat:nth-child(2){border-right:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}
+ .services-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr;grid-template-rows:auto}
+ .card,.card:first-child{grid-column:auto;grid-row:auto;height:270px}
+ .process-grid{grid-template-columns:1fr}
+ .process,.process:nth-child(2),.process:nth-child(3),.process:nth-child(4),.process:nth-child(5){border-right:0;border-top:0;border-bottom:1px solid var(--line)}
+ .process:last-child{border-bottom:0}
+ .footer-grid{grid-template-columns:1fr}
+ .copy{flex-direction:column}
+ .floating{right:13px;bottom:13px}.float{width:48px;height:48px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="container nav-inner">
+  <a class="brand" href="#home">
+   <div class="logo">RS</div>
+   <div class="brand-text">NATIONAL ROLLING SHUTTERS<span>DELHI · PAN INDIA</span></div>
+  </a>
+  <div class="nav-links">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#services">Solutions</a>
+   <a href="#showcase">Showcase</a><a href="#contact">Contact</a>
+   <a class="btn btn-gold" href="https://wa.me/919540546002?text=Hello%20National%20Rolling%20Shutters%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank">WhatsApp</a>
+  </div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+ </div>
+</nav>
+
+<div id="mobileMenu" style="display:none;position:fixed;inset:0;background:#080a0d;z-index:45;padding:115px 9%;">
+ <div style="display:grid;gap:25px;font:500 34px Oswald;text-transform:uppercase">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Solutions</a>
+  <a href="#showcase" onclick="toggleMenu()">Showcase</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+ </div>
+</div>
+
+<header class="hero" id="home">
+ <div class="container hero-content reveal">
+  <div class="eyebrow">National Rolling Shutters®</div>
+  <h1>Built for <span>Security.</span><br>Designed for Performance.</h1>
+  <p class="hero-sub">Rolling shutters, SS water fountain blades and MS / SS fabrication works from a Delhi-based metal fabrication business serving customers across India.</p>
+  <div class="actions">
+   <a class="btn btn-gold" href="#services">Explore Solutions</a>
+   <a class="btn" href="tel:+919540546002">Call 95405 46002</a>
+  </div>
+ </div>
+ <div class="hero-tag">Metal Fabrication · Delhi Based · Pan India Delivery</div>
+</header>
+
+<section class="stats">
+ <div class="container stats-grid">
+  <div class="stat"><strong>1980</strong><span>Established</span></div>
+  <div class="stat"><strong>Pan India</strong><span>Delivery</span></div>
+  <div class="stat"><strong>MS / SS</strong><span>Fabrication</span></div>
+  <div class="stat"><strong>24/7</strong><span>Direct Enquiry</span></div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="container about-grid">
+  <div class="about-image reveal">
+   <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85" alt="Metal fabrication">
+  </div>
+  <div class="reveal">
+   <div class="eyebrow">National Rolling Shutters</div>
+   <h2>Metalwork built for real-world performance.</h2>
+   <div style="height:20px"></div>
+   <p>National Rolling Shutters is a Delhi-based metal fabrication business offering rolling shutters, SS water fountain blades and MS / SS fabrication works.</p>
+   <p>With a strong focus on practical fabrication, finishing and dependable execution, the business serves requirements across India.</p>
+   <div class="quote">"Precision fabrication. Practical solutions. Built to perform."</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">What We Offer</div>
+   <h2>Fabrication solutions for every requirement.</h2>
+   <p>Explore the core product and fabrication categories represented by National Rolling Shutters.</p>
+  </div>
+  <div class="services-grid reveal">
+   <article class="service"><div class="num">01 / ROLLING</div><h3>Rolling Shutters</h3><p>Robust shutter solutions for commercial, industrial and utility applications.</p><div class="arrow">↗</div></article>
+   <article class="service"><div class="num">02 / WATER</div><h3>SS Water Fountain Blades</h3><p>Stainless-steel fountain blade fabrication for distinctive architectural water features.</p><div class="arrow">↗</div></article>
+   <article class="service"><div class="num">03 / MS</div><h3>MS Fabrication</h3><p>Metal fabrication work designed around project-specific structural and functional requirements.</p><div class="arrow">↗</div></article>
+   <article class="service"><div class="num">04 / SS</div><h3>SS Fabrication</h3><p>Stainless-steel fabrication with a clean finish for functional and architectural applications.</p><div class="arrow">↗</div></article>
+   <article class="service"><div class="num">05 / CUSTOM</div><h3>Custom Fabrication</h3><p>Discuss your dimensions, application and finish requirements for a tailored fabrication solution.</p><div class="arrow">↗</div></article>
+   <article class="service"><div class="num">06 / DELIVERY</div><h3>Pan India Delivery</h3><p>Delhi-based operations with delivery support for requirements across India.</p><div class="arrow">↗</div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section showcase" id="showcase">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">Fabrication Showcase</div>
+   <h2>Strength you can see.</h2>
+   <p>Visual references for rolling shutters, fabrication environments, architectural metalwork and finished applications.</p>
+  </div>
+  <div class="gallery reveal">
+   <div class="card"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1400&q=85" alt="Industrial fabrication"><div class="label">Industrial Fabrication</div></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1000&q=85" alt="Metal work"><div class="label">Metalwork</div></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" alt="Construction work"><div class="label">Execution</div></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85" alt="Architectural project"><div class="label">Architecture</div></div>
+   <div class="card"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="Commercial application"><div class="label">Commercial Application</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">How We Work</div>
+   <h2>From requirement to finished fabrication.</h2>
+  </div>
+  <div class="process-grid reveal">
+   <div class="process"><strong>01</strong><h3>Enquire</h3><p>Share your product or fabrication requirement.</p></div>
+   <div class="process"><strong>02</strong><h3>Discuss</h3><p>Confirm dimensions, application and finish.</p></div>
+   <div class="process"><strong>03</strong><h3>Fabricate</h3><p>Move forward with the required fabrication work.</p></div>
+   <div class="process"><strong>04</strong><h3>Finish</h3><p>Complete finishing and preparation for delivery.</p></div>
+   <div class="process"><strong>05</strong><h3>Deliver</h3><p>Coordinate delivery for the required destination.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="banner">
+ <div class="container banner-copy reveal">
+  <div class="eyebrow">Pan India Delivery</div>
+  <h2>Need a fabrication solution?</h2>
+  <p>Connect directly with National Rolling Shutters for rolling shutters, SS water fountain blades and MS / SS fabrication requirements.</p>
+  <div class="actions">
+   <a class="btn btn-gold" href="https://wa.me/919540546002?text=Hello%20National%20Rolling%20Shutters%2C%20I%20need%20a%20fabrication%20quotation." target="_blank">Get a Quote on WhatsApp</a>
+   <a class="btn" href="tel:+919540546002">Call Now</a>
+  </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="eyebrow">Contact</div>
+   <h2>Let's discuss your requirement.</h2>
+  </div>
+  <div class="contact-grid">
+   <div class="info-list reveal">
+    <div class="info"><small>Call</small><a href="tel:+919540546002">09540 546002</a></div>
+    <div class="info"><small>WhatsApp</small><a href="https://wa.me/919540546002" target="_blank">+91 95405 46002</a></div>
+    <div class="info"><small>Email</small><a href="mailto:abdulrashid09540@gmail.com">abdulrashid09540@gmail.com</a></div>
+    <div class="info"><small>Base</small><div>Delhi, India</div></div>
+    <div class="info"><small>Delivery</small><div>Pan India</div></div>
+   </div>
+   <div class="contact-card reveal">
+    <h3>Send an enquiry</h3>
+    <form class="form" onsubmit="sendWhatsApp(event)">
+     <input id="name" required placeholder="Your name">
+     <input id="phone" required type="tel" placeholder="Your phone number">
+     <input id="requirement" placeholder="Rolling Shutter / SS Fountain Blade / MS / SS Fabrication">
+     <textarea id="message" placeholder="Tell us about your requirement, dimensions or project"></textarea>
+     <button class="btn btn-gold" type="submit">Send on WhatsApp ↗</button>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div><div class="footer-brand">National Rolling Shutters®</div><p>Rolling shutters, SS water fountain blades and MS / SS fabrication works. Delhi based with pan India delivery.</p></div>
+   <div><h4>Explore</h4><a href="#about">About</a><a href="#services">Solutions</a><a href="#showcase">Showcase</a><a href="#contact">Contact</a></div>
+   <div><h4>Services</h4><a href="#services">Rolling Shutters</a><a href="#services">SS Fountain Blades</a><a href="#services">MS Fabrication</a><a href="#services">SS Fabrication</a></div>
+   <div><h4>Connect</h4><a href="tel:+919540546002">09540 546002</a><a href="https://wa.me/919540546002" target="_blank">WhatsApp</a><a href="mailto:abdulrashid09540@gmail.com">Email</a></div>
+  </div>
+  <div class="copy"><span>© <span id="year"></span> National Rolling Shutters. All rights reserved.</span><span>Delhi Based · Pan India Delivery</span></div>
+ </div>
+</footer>
+
+<div class="floating">
+ <a class="float call" href="tel:+919540546002" aria-label="Call">☎</a>
+ <a class="float wa" href="https://wa.me/919540546002?text=Hello%20National%20Rolling%20Shutters%2C%20I%20would%20like%20to%20enquire." target="_blank" aria-label="WhatsApp">◉</a>
+</div>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+function toggleMenu(){const m=document.getElementById('mobileMenu');m.style.display=m.style.display==='none'?'block':'none'}
+document.getElementById('year').textContent=new Date().getFullYear();
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value.trim();
+ const p=document.getElementById('phone').value.trim();
+ const r=document.getElementById('requirement').value.trim();
+ const m=document.getElementById('message').value.trim();
+ const text=`Hello National Rolling Shutters,
+
+My name is ${n}.
+Phone: ${p}
+Requirement: ${r||'Fabrication work'}
+Details: ${m||'I would like to discuss my requirement and get a quotation.'}`;
+ window.open('https://wa.me/919540546002?text='+encodeURIComponent(text),'_blank');
+}
+</script>
+</body>
+</html>
